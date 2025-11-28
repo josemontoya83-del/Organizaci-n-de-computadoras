@@ -1,0 +1,1404 @@
+talle 5
+section .data
+    num1 db 16        ; Primera variable (entre 1 y 9)
+    num2 db 1         ; Segunda variable (entre 1 y 9)
+    result db 0       ; Espacio para almacenar el resultado
+
+section .text
+    global _start
+
+_start:
+    mov al, [num1]       ; Cargar num1 en AL
+    add al, [num2]       ; Sumar num2 a AL
+    add al, '0'          ; Convertir el resultado a ASCII
+
+    mov [result], al     ; Guardar el carácter ASCII
+
+    ; Imprimir el número (un solo dígito)
+    mov eax, 4           ; syscall: sys_write
+    mov ebx, 1           ; file descriptor: stdout
+    mov ecx, result      ; Dirección del resultado
+    mov edx, 1           ; Longitud del resultado
+    int 0x80             ; Llamada al sistema
+
+    ; Salir del programa
+    mov eax, 1           ; syscall: sys_exit
+    xor ebx, ebx         ; Código de salida 0
+    int 0x80             ; Llamada al sistema
+//////////////////////////////////////////////////////
+section .data
+    num1 db 0
+    num2 db 1
+    result db 0
+
+section .text
+    global _start
+
+_start:
+    mov al, [num1]
+    add al, [num2]
+    add al, '0'
+    mov [result], al
+
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, result
+    mov edx, 1
+    int 0x80
+
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+//////////////////////////////////////////////////////
+section .data
+    num1 db 12
+    num2 db 1
+    result db 0
+
+section .text
+    global _start
+
+_start:
+    mov al, [num1]
+    add al, [num2]
+    add al, '0'
+    mov [result], al
+
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, result
+    mov edx, 1
+    int 0x80
+
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+//////////////////////////////////////////////////////
+section .data
+    num1 db 14
+    num2 db 1
+    result db 0
+
+section .text
+    global _start
+
+_start:
+    mov al, [num1]
+    add al, [num2]
+    add al, '0'
+    mov [result], al
+
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, result
+    mov edx, 1
+    int 0x80
+
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+//////////////////////////////////////////////////////
+section .data
+    num1 db 14
+    num2 db 1
+    result db 0
+
+section .text
+    global _start
+
+_start:
+    mov al, [num1]
+    add al, [num2]
+    add al, '0'
+    mov [result], al
+
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, result
+    mov edx, 1
+    int 0x80
+
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+//////////////////////////////////////////////////////
+section .data
+    num1 db 46
+    num2 db 1
+    result db 0
+
+section .text
+    global _start
+
+_start:
+    mov al, [num1]
+    add al, [num2]
+    add al, '0'
+    mov [result], al
+
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, result
+    mov edx, 1
+    int 0x80
+
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+///////////////////////////////////////
+section .data
+    num1 db 67
+    num2 db 1
+    result db 0
+
+section .text
+    global _start
+
+_start:
+    mov al, [num1]
+    sub al, [num2]
+    mov [result], al
+
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, result
+    mov edx, 1
+    int 0x80
+
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+/////////////////////////////////////////
+section .data
+    num1 db 89
+    num2 db 1
+    result db 0
+
+section .text
+    global _start
+
+_start:
+    mov al, [num1]
+    sub al, [num2]
+    mov [result], al
+
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, result
+    mov edx, 1
+    int 0x80
+
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+/////////////////////////////////////////
+section .data
+    num1 db 44
+    num2 db 1
+    result db 0
+
+section .text
+    global _start
+
+_start:
+    mov al, [num1]
+    sub al, [num2]
+    mov [result], al
+
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, result
+    mov edx, 1
+    int 0x80
+
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+/////////////////////////////////////////
+section .data
+    num1 db 40
+    num2 db 1
+    result db 0
+
+section .text
+    global _start
+
+_start:
+    mov al, [num1]
+    sub al, [num2]
+    mov [result], al
+
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, result
+    mov edx, 1
+    int 0x80
+
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+/////////////////////////////////////////
+section .data
+    num1 db 124
+    num2 db 1
+    result db 0
+
+section .text
+    global _start
+
+_start:
+    mov al, [num1]
+    sub al, [num2]
+    mov [result], al
+
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, result
+    mov edx, 1
+    int 0x80
+
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+////////////////////////////////////////////////////////////////////////////////////////
+taller 6
+section .data
+    num1 db 2        ; Primera variable (entre ...
+    num2 db 1        ; Segunda variable (entre ...
+    result db 0      ; Espacio para almacenar el ...
+
+section .text
+    global _start
+
+_start:
+    mov eax, 123
+    JMP main;
+
+main:
+
+    mov [result], al     ; Guardar el carácter ASCII
+
+    ; Imprimir el número (un solo dígito)
+    mov eax, 4           ; syscall: sys_write
+    mov ebx, 1           ; file descriptor: stdout
+    mov ecx, result      ; Dirección del resultado
+    mov edx, 1           ; Longitud del resultado
+    int 0x80             ; Llamada al sistema
+
+    ; Salir del programa
+    mov eax, 1           ; syscall: sys_exit
+    xor ebx, ebx         ; Código de salida 0
+    int 0x80             ; Llamada al sistema
+////////////////////////////////////////////////////////////////////////////////////////////////
+Taller 8
+section .data
+    num1 dw 15
+    num2 dw 20
+
+section .text
+    global _start
+
+_start:
+    MOV AX, [num1]
+    MOV BX, [num2]
+    CMP AX, 0
+    JS NUM1_NEG
+    CMP BX, 0
+    JS NUM2_NEG
+    CMP AX, BX
+    JE IGUALES
+    JG NUM1_MAYOR
+    JL NUM2_MAYOR
+
+NUM1_NEG:
+    JMP FIN
+NUM2_NEG:
+    JMP FIN
+IGUALES:
+    JMP FIN
+NUM1_MAYOR:
+    JMP FIN
+NUM2_MAYOR:
+    JMP FIN
+
+FIN:
+    ; Salir del programa
+    MOV EAX, 1
+    XOR EBX, EBX
+    INT 0x80
+/////////////////////////////////////////
+section .data
+    n dw -5
+
+section .text
+    global _start
+
+_start:
+    MOV AX, [n]
+    CMP AX, 0
+    JG POSITIVO
+    JL NEGATIVO
+    JE CERO
+
+POSITIVO:
+    JMP FIN
+NEGATIVO:
+    JMP FIN
+CERO:
+    JMP FIN
+
+FIN:
+    MOV EAX, 1
+    XOR EBX, EBX
+    INT 0x80
+/////////////////////////////////////////
+section .data
+    n dw -5
+
+section .text
+    global _start
+
+_start:
+    MOV AX, [n]
+    CMP AX, 0
+    JG POSITIVO
+    JL NEGATIVO
+    JE CERO
+
+POSITIVO:
+    JMP FIN
+NEGATIVO:
+    JMP FIN
+CERO:
+    JMP FIN
+
+FIN:
+    MOV EAX, 1
+    XOR EBX, EBX
+    INT 0x80
+/////////////////////////////////////////
+section .data
+    n dw 7
+
+section .text
+    global _start
+
+_start:
+    MOV AX, [n]
+    MOV AL, AL
+    AND AL, 1
+    TEST AL, AL
+    JZ ES_PAR
+
+ES_IMPAR:
+    JMP FIN
+
+ES_PAR:
+    JMP FIN
+
+FIN:
+    MOV EAX, 1
+    XOR EBX, EBX
+    INT 0x80
+/////////////////////////////////////////
+section .data
+    a dw 32767
+    b dw 1
+
+section .text
+    global _start
+
+_start:
+    MOV AX, [a]
+    MOV BX, [b]
+    ADD AX, BX
+    JO DETECTADO_OVERFLOW
+    JNO NO_OVERFLOW
+
+DETECTADO_OVERFLOW:
+    JMP FIN
+
+NO_OVERFLOW:
+    JMP FIN
+
+FIN:
+    MOV EAX, 1
+    XOR EBX, EBX
+    INT 0x80
+/////////////////////////////////////////
+section .data
+    a dw 65535
+    b dw 1
+
+section .text
+    global _start
+
+_start:
+    MOV AX, [a]
+    MOV BX, [b]
+    ADD AX, BX
+    JC HAY_ACARREO
+    JNC NO_ACARREO
+
+HAY_ACARREO:
+    JMP FIN
+
+NO_ACARREO:
+    JMP FIN
+
+FIN:
+    MOV EAX, 1
+    XOR EBX, EBX
+    INT 0x80
+/////////////////////////////////////////
+section .data
+    a dw 65535
+    b dw 1
+
+section .text
+    global _start
+
+_start:
+    MOV AX, [a]
+    MOV BX, [b]
+    ADD AX, BX
+    JC HAY_ACARREO
+    JNC NO_ACARREO
+
+HAY_ACARREO:
+    JMP FIN
+
+NO_ACARREO:
+    JMP FIN
+
+FIN:
+    MOV EAX, 1
+    XOR EBX, EBX
+    INT 0x80
+/////////////////////////////////////////
+section .data
+    a dw 15
+    b dw 8
+    c dw 20
+    max dw 0
+    min dw 0
+
+section .text
+    global _start
+
+_start:
+    MOV AX, [a]
+    MOV BX, [b]
+    MOV CX, [c]
+    MOV [max], AX
+    MOV [min], AX
+    
+    CMP BX, [max]
+    JG ACTUALIZA_MAX_B
+    CMP BX, [min]
+    JL ACTUALIZA_MIN_B
+    JMP SIGUIENTE1
+
+ACTUALIZA_MAX_B:
+    MOV [max], BX
+    JMP SIGUIENTE1
+
+ACTUALIZA_MIN_B:
+    MOV [min], BX
+
+SIGUIENTE1:
+    CMP CX, [max]
+    JG ACTUALIZA_MAX_C
+    CMP CX, [min]
+    JL ACTUALIZA_MIN_C
+    JMP FIN
+
+ACTUALIZA_MAX_C:
+    MOV [max], CX
+    JMP FIN
+
+ACTUALIZA_MIN_C:
+    MOV [min], CX
+
+FIN:
+    MOV EAX, 1
+    XOR EBX, EBX
+    INT 0x80
+/////////////////////////////////////////
+section .data
+    a dw 15
+    b dw 8
+    c dw 20
+    max dw 0
+    min dw 0
+
+section .text
+    global _start
+
+_start:
+    MOV AX, [a]
+    MOV BX, [b]
+    MOV CX, [c]
+    MOV [max], AX
+    MOV [min], AX
+    
+    CMP BX, [max]
+    JG ACTUALIZA_MAX_B
+    CMP BX, [min]
+    JL ACTUALIZA_MIN_B
+    JMP SIGUIENTE1
+
+ACTUALIZA_MAX_B:
+    MOV [max], BX
+    JMP SIGUIENTE1
+
+ACTUALIZA_MIN_B:
+    MOV [min], BX
+
+SIGUIENTE1:
+    CMP CX, [max]
+    JG ACTUALIZA_MAX_C
+    CMP CX, [min]
+    JL ACTUALIZA_MIN_C
+    JMP FIN
+
+ACTUALIZA_MAX_C:
+    MOV [max], CX
+    JMP FIN
+
+ACTUALIZA_MIN_C:
+    MOV [min], CX
+
+FIN:
+    MOV EAX, 1
+    XOR EBX, EBX
+    INT 0x80
+/////////////////////////////////////////////
+section .data
+    n1 dw 25
+    n2 dw 10
+
+section .text
+    global _start
+
+_start:
+    MOV AX, [n1]
+    MOV BX, [n2]
+    CMP AX, BX
+    JLE YA_ORDERADOS
+    XCHG AX, BX
+    MOV [n1], AX
+    MOV [n2], BX
+    JMP FIN
+
+YA_ORDERADOS:
+FIN:
+    MOV EAX, 1
+    XOR EBX, EBX
+    INT 0x80
+///////////////////////////////////////////////
+section .text
+    global _start
+
+_start:
+    MOV CX, 10
+    MOV BX, 0
+
+LOOP_START:
+    INC BX
+    LOOP LOOP_START
+
+FIN:
+    MOV EAX, 1
+    XOR EBX, EBX
+    INT 0x80
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+Taller 9
+section .data
+    num1 db 5
+    num2 db 11
+    result db 0
+    msg db 'Resultado:', 0
+
+section .bss
+    buffer resb 4
+
+section .text
+    global _start
+
+_start:
+    ; Cargar num1 en AL (direccionamiento directo)
+    mov al, [num1]
+    
+    ; Sumar num2 a AL (direccionamiento directo)
+    add al, [num2]
+    
+    ; Guardar resultado en memoria (direccionamiento directo)
+    mov [result], al
+    
+    ; Cargar resultado en EAX extendiendo con ceros
+    movzx eax, byte [result]
+    
+    ; Convertir a ASCII sumando 48
+    add eax, 48
+    
+    ; Almacenar carácter ASCII en buffer
+    mov [buffer], al
+    
+    ; Imprimir mensaje "Resultado: "
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, msg
+    mov edx, 11
+    int 0x80
+    
+    ; Imprimir el carácter resultante
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, buffer
+    mov edx, 1
+    int 0x80
+    
+    ; Salir del programa
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+////////////////////////////////////////////////////////
+section .data
+    num1 db 6
+    num2 db 11
+    result db 0
+    msg db 'Resultado: ', 0
+
+section .bss
+    buffer resb 4
+
+section .text
+    global _start
+
+_start:
+    mov al, [num1]
+    add al, [num2]    ; 6 + 11 = 17
+    mov [result], al
+    
+    movzx eax, byte [result]
+    add eax, 48       ; 17 + 48 = 65 = 'A'
+    mov [buffer], al
+    
+    ; Imprimir mensaje
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, msg
+    mov edx, 11
+    int 0x80
+    
+    ; Imprimir carácter
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, buffer
+    mov edx, 1
+    int 0x80
+    
+    ; Salir
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+////////////////////////////////////////////////////
+section .data
+    num1 db 33
+    num2 db 11
+    result db 0
+    msg db 'Resultado: ', 0
+
+section .bss
+    buffer resb 4
+
+section .text
+    global _start
+
+_start:
+    mov al, [num1]
+    add al, [num2]    ; 33 + 11 = 44
+    mov [result], al
+    
+    movzx eax, byte [result]
+    add eax, 48       ; 44 + 48 = 92 = '\'
+    mov [buffer], al
+    
+    ; Resto del código igual...
+/////////////////////////////////////////////////////////////
+section .data
+    num1 db -1
+    num2 db -11
+    result db 0
+    msg db 'Resultado: ', 0
+
+section .bss
+    buffer resb 4
+
+section .text
+    global _start
+
+_start:
+    mov al, [num1]
+    add al, [num2]    ; -1 + (-11) = -12
+    mov [result], al
+    
+    movzx eax, byte [result]
+    add eax, 48       ; -12 + 48 = 36 = '$'
+    mov [buffer], al
+    
+    ; Resto del código igual...
+//////////////////////////////////////////////////////////
+section .data
+    num1 db -11
+    num2 db -11
+    result db 0
+    msg db 'Resultado: ', 0
+
+section .bss
+    buffer resb 4
+
+section .text
+    global _start
+
+_start:
+    mov al, [num1]
+    add al, [num2]    ; -11 + (-11) = -22
+    mov [result], al
+    
+    movzx eax, byte [result]
+    add eax, 48       ; -22 + 48 = 26 (pero con overflow: 38 = '&')
+    mov [buffer], al
+    
+    ; Resto del código igual...
+///////////////////////////////////////////////////////
+section .data
+    num1 db 1
+    num2 db 0
+    result db 0
+    msg db 'Resultado: ', 0
+
+section .bss
+    buffer resb 4
+
+section .text
+    global _start
+
+_start:
+    mov al, [num1]
+    add al, [num2]    ; 1 + 0 = 1
+    mov [result], al
+    
+    movzx eax, byte [result]
+    add eax, 48       ; 1 + 48 = 49 = '1'
+    mov [buffer], al
+    
+    ; Resto del código igual...
+//////////////////////////////////////////////////
+section .data
+    msg db 'Resultado: ', 0
+
+section .bss
+    buffer resb 4
+
+section .text
+    global _start
+
+_start:
+    ; Modo inmediato - cargar valores directamente
+    mov al, 5         ; inmediato
+    add al, 11        ; inmediato
+    add al, 48        ; inmediato - convertir a ASCII
+    
+    mov [buffer], al  ; directo
+    
+    ; Imprimir mensaje
+    mov eax, 4        ; inmediato
+    mov ebx, 1        ; inmediato
+    mov ecx, msg      ; directo
+    mov edx, 11       ; inmediato
+    int 0x80
+    
+    ; Imprimir carácter '@'
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, buffer
+    mov edx, 1
+    int 0x80
+    
+    ; Salir
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+/////////////////////////////////////////////////
+section .data
+    num1 db 5
+    num2 db 11
+    result db 0
+    msg db 'Resultado: ', 0
+
+section .bss
+    buffer resb 4
+
+section .text
+    global _start
+
+_start:
+    ; Modo indirecto - usando registros como punteros
+    mov esi, num1     ; ESI apunta a num1
+    mov edi, num2     ; EDI apunta a num2
+    
+    mov al, [esi]     ; indirecto por registro
+    add al, [edi]     ; indirecto por registro
+    add al, 48        ; inmediato
+    
+    mov ebx, buffer   ; EBX apunta al buffer
+    mov [ebx], al     ; indirecto por registro
+    
+    ; Imprimir mensaje
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, msg
+    mov edx, 11
+    int 0x80
+    
+    ; Imprimir carácter '@'
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, buffer
+    mov edx, 1
+    int 0x80
+    
+    ; Salir
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+///////////////////////////////////////////////////////////////////////////////////
+Taller 10
+section .data
+    char db 0
+    newline db 10
+
+section .text
+    global _start
+
+_start:
+    ; Instrucciones de desplazamiento/rotación aquí
+    
+    mov [char], al
+    
+    ; Imprimir carácter
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, char
+    mov edx, 1
+    int 0x80
+    
+    ; Imprimir nueva línea
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, newline
+    mov edx, 1
+    int 0x80
+    
+    ; Salir
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+///////////////////////////////////////////////////
+section .data
+    char db 0
+    newline db 10
+
+section .text
+    global _start
+
+_start:
+    mov al, 0x41        ; 'A' en ASCII (65)
+    
+    ; Operaciones SHL, SHR, ROR, ROL
+    shl al, 1           ; 65 << 1 = 130
+    shr al, 1           ; 130 >> 1 = 65
+    ror al, 4           ; Rota 4 bits a la derecha
+    rol al, 4           ; Rota 4 bits a la izquierda (vuelve a 65)
+    
+    mov [char], al
+    
+    ; Imprimir carácter
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, char
+    mov edx, 1
+    int 0x80
+    
+    ; Imprimir nueva línea
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, newline
+    mov edx, 1
+    int 0x80
+    
+    ; Salir
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+////////////////////////////////////////////////////
+section .data
+    char db 0
+    newline db 10
+
+section .text
+    global _start
+
+_start:
+    mov al, 0x30        ; '0' en ASCII (48)
+    
+    ; Operaciones SHL, SHR, ROR, ROL
+    shl al, 1           ; 48 << 1 = 96
+    shr al, 1           ; 96 >> 1 = 48
+    ror al, 2           ; Rota 2 bits a la derecha
+    rol al, 2           ; Rota 2 bits a la izquierda (vuelve a 48)
+    
+    mov [char], al
+    
+    ; Resto del código igual...
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, char
+    mov edx, 1
+    int 0x80
+    
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, newline
+    mov edx, 1
+    int 0x80
+    
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+///////////////////////////////////////////
+section .data
+    char db 0
+    newline db 10
+
+section .text
+    global _start
+
+_start:
+    mov al, 0x67        ; 'g' en ASCII (103)
+    
+    ; Operaciones SHL, SHR, ROR, ROL
+    ror al, 1           ; Rota 1 bit a la derecha
+    rol al, 1           ; Rota 1 bit a la izquierda (vuelve a 103)
+    shr al, 1           ; 103 >> 1 = 51
+    shl al, 1           ; 51 << 1 = 102
+    
+    ; Ajustar para obtener 'g' (103)
+    add al, 1           ; 102 + 1 = 103 = 'g'
+    
+    mov [char], al
+    
+    ; Resto del código igual...
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, char
+    mov edx, 1
+    int 0x80
+    
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, newline
+    mov edx, 1
+    int 0x80
+    
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+////////////////////////////////////////////////
+section .data
+    char db 0
+    newline db 10
+
+section .text
+    global _start
+
+_start:
+    mov al, 0x3D        ; '=' en ASCII (61)
+    
+    ; Operaciones SHL, SHR, ROR, ROL
+    rol al, 1           ; Rota 1 bit a la izquierda
+    ror al, 1           ; Rota 1 bit a la derecha (vuelve a 61)
+    shl al, 1           ; 61 << 1 = 122
+    shr al, 1           ; 122 >> 1 = 61
+    
+    mov [char], al
+    
+    ; Resto del código igual...
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, char
+    mov edx, 1
+    int 0x80
+    
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, newline
+    mov edx, 1
+    int 0x80
+    
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+/////////////////////////////////////////////////////////////////////////////////////
+Taller 11
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ejercicio 1:
+A:
+section .data
+    num1 db 46; Primera variable (entre 1 y 3)
+    num2 db 1         ; Segunda variable (entre 1 y 3)
+    result db 0       ; Espacio para almacenar el resultado convertido a ASCII
+
+section .text
+    global _start
+
+_start:
+    mov al, [num1]    ; Cargar num1 en AL
+    add al, [num2]    ; Sumar num2 a AL
+    add al, '0'       ; Convertir el resultado a ASCII
+
+    mov [result], al  ; Guardar el carácter ASCII en 'result'
+
+    ; Imprimir el número (un solo dígito)
+    mov eax, 4        ; syscall: sys_write
+    mov ebx, 1        ; file descriptor: stdout
+    mov ecx, result   ; Dirección del resultado
+    mov edx, 1        ; Longitud del resultado
+    int 0x80          ; Llamada al sistema
+
+    ; Salir del programa
+    mov eax, 1        ; syscall: sys_exit
+    xor ebx, ebx      ; Código de salida 0
+    int 0x80          ; Llamada al sistema
+B:
+section .data
+    num1 db 67; Primera variable (entre 1 y 3)
+    num2 db 1         ; Segunda variable (entre 1 y 3)
+    result db 0       ; Espacio para almacenar el resultado convertido a ASCII
+
+section .text
+    global _start
+
+_start:
+    mov al, [num1]    ; Cargar num1 en AL
+    sub al, [num2]    ; Sumar num2 a AL
+           ; Convertir el resultado a ASCII
+
+    mov [result], al  ; Guardar el carácter ASCII en 'result'
+
+    ; Imprimir el número (un solo dígito)
+    mov eax, 4        ; syscall: sys_write
+    mov ebx, 1        ; file descriptor: stdout
+    mov ecx, result   ; Dirección del resultado
+    mov edx, 1        ; Longitud del resultado
+    int 0x80          ; Llamada al sistema
+
+    ; Salir del programa
+    mov eax, 1        ; syscall: sys_exit
+    xor ebx, ebx      ; Código de salida 0
+    int 0x80          ; Llamada al sistema
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+section .data
+    msgTry      db "Intentando dividir...", 0
+    msgCatch    db "Error: division por cero atrapada!", 0
+    msgSuccess  db "Division exitosa.", 0
+
+section .bss
+    result      resd 1
+
+section .text
+    global _start
+
+_start:
+    ; TRY BLOCK
+    mov eax, 10         ; numerador
+    mov ebx, 0          ; denominador (provoca error)
+
+    cmp ebx, 0          ; ¿es cero?
+    je catch_block      ; si es cero, salta al bloque catch
+
+    ; División segura
+    div ebx             ; divide eax entre ebx
+    mov [result], eax   ; guarda el resultado
+    jmp end_try         ; salta al final del bloque try
+
+catch_block:
+    ; Simula el bloque CATCH
+    ; Aquí podrías manejar el error, mostrar mensaje, etc.
+    mov edx, len msgCatch
+    mov ecx, msgCatch
+    call print_string
+    jmp end_program
+
+end_try:
+    ; Si la división fue exitosa
+    mov edx, len msgSuccess
+    mov ecx, msgSuccess
+    call print_string
+
+end_program:
+    ; Salida limpia
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+
+; Función auxiliar para imprimir cadenas
+print_string:
+    mov eax, 4
+    mov ebx, 1
+    int 0x80
+    ret
+
+; Macro para calcular longitud de cadena
+%macro len 1
+    (%strlen %1)
+%endmacro
+//////////////////////////////////////////////////////////////////////////////////////
+Taller 11
+section .data 
+    msg db "Resultado: ", 0
+    len equ $ - msg
+
+    msgError db "Error: division entre 0", 10, 0
+    lenErr equ $ - msgError
+
+    newline db 10, 0
+    lenNL equ $ - newline
+
+section .bss
+    resultado resb 1
+
+section .text
+    global _start
+
+_start:
+    ; ============================
+    ; Números hardcoded
+    ; ============================
+    mov al, '8'       ; primer número (ASCII)
+    sub al, '0'       ; convertir a entero (8)
+
+    mov bl, '0'       ; segundo número (ASCII) -> PRUEBA ERROR
+    sub bl, '0'       ; convertir a entero (0)
+
+    ; ============================
+    ; SIMULAR INTERRUPCIÓN POR DIV 0
+    ; usando saltos condicionales
+    ; ============================
+    cmp bl, 0
+    je division_cero        ; si es 0 -> salto a "rutina de interrupción" simulada
+
+    ; ============================
+    ; División AL / BL (segura)
+    ; ============================
+    xor ah, ah
+    div bl                  ; resultado en AL
+
+    ; ============================
+    ; Convertir resultado a ASCII
+    ; ============================
+    add al, '0'
+    mov [resultado], al
+
+    jmp imprimir_resultado   ; saltar a imprimir resultado
+
+
+; ========================================
+; RUTINA SIMULADA DE INTERRUPCIÓN POR DIV 0
+; ========================================
+division_cero:
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, msgError
+    mov edx, lenErr
+    int 0x80
+    jmp salir
+
+
+; ============================
+; Imprimir resultado normal
+; ============================
+imprimir_resultado:
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, msg
+    mov edx, len
+    int 0x80
+
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, resultado
+    mov edx, 1
+    int 0x80
+
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, newline
+    mov edx, lenNL
+    int 0x80
+
+; ============================
+; Salir
+; ============================
+salir:
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+
+/////////////////////////////////////////////////
+; -------------------------------------------------
+; Función: multiplicar_por_dos
+; Recibe:  un entero en EAX
+; Devuelve: el número multiplicado por 2 en EAX
+; -------------------------------------------------
+
+section .text
+    global multiplicar_por_dos   ; hacemos visible la función al exterior
+
+multiplicar_por_dos:
+    push    ebp                  ; guardar el base pointer (opcional pero buena práctica)
+    mov     ebp, esp             ; establecer nuevo marco de pila
+
+    ; El parámetro ya viene en EAX (por convención de llamada en algunos compiladores)
+    ; o si usas cdecl, el parámetro está en la pila: [ebp+8]
+    ; Aquí usamos la versión más simple: el número entra en EAX
+
+    shl     eax, 1               ; Multiplicar por 2 = desplazamiento izquierda 1 bit
+    ; También puedes usar: add eax, eax   (eax = eax + eax)
+
+    pop     ebp                  ; restaurar ebp
+    ret                          ; volver al programa C
+
+//////////////////////////////////////////////////////////////////////////////////////
+Taller 12
+section .data
+    ; Estructura con tres valores X
+    estructura:
+        x1 dd 5
+        x2 dd 15
+        x3 dd 20
+    
+    ; Mensajes para mostrar
+    msg_suma db "Suma: "
+    len_suma equ $ - msg_suma
+    
+    msg_resultado db "     ", 10  ; Espacio para el resultado + newline
+    len_resultado equ $ - msg_resultado
+    
+    newline db 10
+
+section .bss
+    ; Buffer para conversión numérica
+    buffer resb 10
+
+section .text
+    global _start
+
+; Macro para imprimir (similar a la del PDF)
+%macro PRINT 2
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, %1
+    mov edx, %2
+    int 0x80
+%endmacro
+
+; Macro para imprimir un número
+%macro PRINT_NUM 1
+    mov eax, %1
+    call convertir_numero
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, buffer
+    mov edx, 10
+    int 0x80
+%endmacro
+
+_start:
+    ; Calcular la suma de los elementos de la estructura
+    mov eax, [x1]
+    add eax, [x2]
+    add eax, [x3]
+    
+    ; Guardar la suma
+    mov ebx, eax
+    
+    ; Imprimir mensaje "Suma: "
+    PRINT msg_suma, len_suma
+    
+    ; Imprimir el resultado numérico
+    PRINT_NUM ebx
+    
+    ; Imprimir nueva línea
+    PRINT newline, 1
+    
+    ; Salir del programa
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+
+; Función para convertir número a ASCII
+convertir_numero:
+    mov edi, buffer
+    mov ecx, 10
+    mov esi, 0          ; Contador de dígitos
+    
+.convertir_loop:
+    xor edx, edx
+    div ecx             ; Dividir EAX por 10
+    add dl, '0'         ; Convertir resto a ASCII
+    mov [edi + esi], dl
+    inc esi
+    test eax, eax
+    jnz .convertir_loop
+    
+    ; Invertir el string
+    mov ecx, esi
+    shr ecx, 1
+    jz .fin
+    
+.invertir:
+    dec esi
+    mov al, [edi]
+    mov bl, [edi + esi]
+    mov [edi], bl
+    mov [edi + esi], al
+    inc edi
+    dec ecx
+    jnz .invertir
+
+.fin:
+    ret
+///////////////////////////////////////////////////////////////////////////////////////////////
